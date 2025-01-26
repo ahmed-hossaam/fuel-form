@@ -165,7 +165,9 @@ header {
     flex: 1 1 45%;
     max-width: 100%;
 }
-
+#page1 .left img{
+    width: 70%;
+}
 #order .car {
     display: flex;
     flex-wrap: wrap;
