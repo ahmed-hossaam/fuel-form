@@ -65,6 +65,7 @@ backButtonPage3.addEventListener('click', function (e) {
     page3.style.display = 'none'; 
     page2.style.display = 'block';
 });
+
 /// location
 let accuracyI = document.querySelector("#Accuracy");
 
@@ -77,6 +78,8 @@ let longitudeI = document.querySelector("#Longitude");
 let latitudeI = document.querySelector("#Latitude");
 
 let buttonI = document.querySelector("#getLocation");
+
+let inputs= document.querySelectorAll(".form-control")
 
 buttonI.addEventListener("click", () => {
 
@@ -92,7 +95,11 @@ buttonI.addEventListener("click", () => {
 
         speedI.value = `${speed | 0} m/s`;
 
+        inputs.forEach(map=>{
+            map.style.backgroundColor="white"
+        })
         googleI.value = `https://google.com/maps?q=${latitude}, ${longitude}`;
+
 
     });
 
@@ -141,3 +148,5 @@ menuButton.addEventListener("click", () => {
     }
 
 });
+
+
