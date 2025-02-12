@@ -124,21 +124,6 @@ nextButtonPage2.addEventListener('click', function (e) {
     }
 });
 
-// Back Button in Page 2
-const backButtonPage2 = document.querySelector('.back-page2');
-backButtonPage2.addEventListener('click', function (e) {
-    e.preventDefault();
-    page2.style.display = 'none';
-    page1.style.display = 'block';
-});
-
-// Back Button in Page 3
-const backButtonPage3 = document.querySelector('.back-page3');
-backButtonPage3.addEventListener('click', function (e) {
-    e.preventDefault();
-    page3.style.display = 'none';
-    page2.style.display = 'block';
-});
 
 // Location Handling (on Page 3)
 let accuracyI = document.querySelector("#Accuracy");
