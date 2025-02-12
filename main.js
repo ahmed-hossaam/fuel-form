@@ -1,155 +1,3 @@
-// // option fuel
-// const option1Checkbox = document.getElementById('option1');
-// const fuelOptionDiv = document.querySelector('.fuel-option');
-// const hiddenTextarea = document.querySelector('.hidden-textarea');
-// const nextButton = document.getElementById('nextButton');
-
-// let clickCount = 0; 
-// option1Checkbox.addEventListener('change', function() {
-//     if (this.checked) {
-//         fuelOptionDiv.classList.remove('hidden');
-//     } else {
-//         fuelOptionDiv.classList.add('hidden');
-//     }
-// });
-
-// nextButton.addEventListener('click', function(event) {
-//     clickCount++;
-//     if (clickCount === 1) {
-//         event.preventDefault(); 
-//         fuelOptionDiv.classList.add('hidden');
-//         hiddenTextarea.classList.remove('hidden');
-//     } else if (clickCount === 2) {
-//     }
-// });
-
-// // ---------------
-// const nextButtonPage1 = document.querySelector('.next');
-// const page1 = document.getElementById('page1');
-// const page2 = document.getElementById('page2');
-
-// const nextButtonPage2 = document.getElementById('nextButton');
-// const textarea = document.querySelector('.hidden-textarea');
-// const page3 = document.getElementById('page3');
-
-// let page2NextClicked = false;
-
-// nextButtonPage1.addEventListener('click', function (e) {
-//     e.preventDefault(); 
-//     page1.style.display = 'none';  
-//     page2.style.display = 'block'; 
-// });
-
-// nextButtonPage2.addEventListener('click', function (e) {
-//     e.preventDefault();  
-
-//     if (!page2NextClicked) {
-//         textarea.classList.remove('hidden');
-//         page2NextClicked = true;
-//     } else {
-//         page2.style.display = 'none'; 
-//         page3.style.display = 'block';
-//     }
-// });
-
-// const backButtonPage2 = document.querySelector('.back-page2');
-// backButtonPage2.addEventListener('click', function (e) {
-//     e.preventDefault();           
-//     page2.style.display = 'none'; 
-//     page1.style.display = 'block';
-// });
-
-// const backButtonPage3 = document.querySelector('.back-page3');
-// backButtonPage3.addEventListener('click', function (e) {
-//     e.preventDefault();           
-//     page3.style.display = 'none'; 
-//     page2.style.display = 'block';
-// });
-
-// /// location
-// let accuracyI = document.querySelector("#Accuracy");
-
-// let googleI = document.querySelector("#Google");
-
-// let speedI = document.querySelector("#Speed");
-
-// let longitudeI = document.querySelector("#Longitude");
-
-// let latitudeI = document.querySelector("#Latitude");
-
-// let buttonI = document.querySelector("#getLocation");
-
-// let inputs= document.querySelectorAll(".form-control")
-
-// buttonI.addEventListener("click", () => {
-
-//     navigator.geolocation.getCurrentPosition(position => {
-
-//         let { latitude, longitude, accuracy, speed } = position.coords;
-
-//         accuracyI.value = `${accuracy} m`;
-
-//         longitudeI.value = longitude;
-
-//         latitudeI.value = latitude;
-
-//         speedI.value = `${speed | 0} m/s`;
-
-//         inputs.forEach(map=>{
-//             map.style.backgroundColor="white"
-//         })
-//         googleI.value = `https://google.com/maps?q=${latitude}, ${longitude}`;
-
-
-//     });
-
-// });
-
-
-// // Navbar
-
-
-// window.addEventListener("resize", () => {
-
-//     if (window.innerWidth >= 992) {
-
-//         if (toggled) {
-
-//             menuButton.click();
-
-//         }
-
-//     }
-
-// });
-
-// menuButton.addEventListener("click", () => {
-
-//     if (!toggled) {
-
-//         if (languageText.innerText == "AR") {
-
-//             menu.style.height = "252px";
-
-//         } else {
-
-//             menu.style.height = "272px";
-
-//         }
-
-//         toggled = true;
-
-//     } else {
-
-//         menu.style.height = "0px";
-
-//         toggled = false;
-
-//     }
-
-// });
-
-
 // // validation
 
 // Page 1 to Page 2 Navigation
@@ -168,34 +16,63 @@ function validatePage1() {
 
     // Validate Name
     if (name.value) {
-        name.style.backgroundColor = "white"; // If valid, set to white
+        name.style.backgroundColor = "white";
+        name.style.color = "black";
     } else {
         isValid = false;
     }
 
-    // Validate Phone
-    if (phone.value) {
-        phone.style.backgroundColor = "white"; // If valid, set to white
+    // Validate Phone (must be numeric and a certain length, e.g., 10 digits)
+    const phonePattern = /^[0-9]{10}$/; // RegEx to check for exactly 10 digits
+    if (phonePattern.test(phone.value)) {
+        phone.style.backgroundColor = "white";
+        phone.style.color = "black";
     } else {
         isValid = false;
     }
 
     // Validate Car Type
     if (carType.value) {
-        carType.style.backgroundColor = "white"; // If valid, set to white
+        carType.style.backgroundColor = "white";
+        carType.style.color = "black";
     } else {
         isValid = false;
     }
 
     // Validate Car Model
     if (carModel.value) {
-        carModel.style.backgroundColor = "white"; // If valid, set to white
+        carModel.style.backgroundColor = "white";
+        carModel.style.color = "black";
     } else {
         isValid = false;
     }
 
     return isValid;
 }
+
+// Event listeners to change background on focus and blur
+document.getElementById('name').addEventListener('focus', function() {
+    this.style.backgroundColor = "white";
+    this.style.color = "black";
+});
+document.getElementById('phone').addEventListener('focus', function() {
+    this.style.backgroundColor = "white";
+    this.style.color = "black";
+});
+document.getElementById('type').addEventListener('focus', function() {
+    this.style.backgroundColor = "white";
+    this.style.color = "black";
+});
+document.getElementById('model').addEventListener('focus', function() {
+    this.style.backgroundColor = "white";
+    this.style.color = "black";
+});
+document.getElementById('message').addEventListener('focus', function() {
+    this.style.backgroundColor = "white";
+    this.style.color = "black";
+    this.style.paddingTop = "-20px";
+});
+
 
 nextButtonPage1.addEventListener('click', function (e) {
     e.preventDefault();
@@ -207,6 +84,7 @@ nextButtonPage1.addEventListener('click', function (e) {
     } else {
         alert("Please fill in all the fields correctly.");
     }
+    
 });
 
 // Page 2 to Page 3 Navigation
