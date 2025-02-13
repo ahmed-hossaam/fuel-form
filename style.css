@@ -283,7 +283,13 @@ label {
         padding: 20px;
         color: #fff;
     }
-}
+    #page2 .share{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+  }
 @media (max-width: 400px) {
     #page2 .buttons{
         display: flex;
@@ -304,7 +310,11 @@ label {
     #page2 .buttons .next{
         margin-right: 20px;
     } 
-    
+    #page2 .share{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 } 
 /* ------- End page 2 ------ */
 /* ------- Start page 3 ------ */
