@@ -1,306 +1,173 @@
-<!Doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta name="description"
-    content="Fuel Tech is a specialized website offering comprehensive car maintenance and care services. We provide convenient and fast solutions, including tire replacement, car washing, fuel delivery, repairs, and on-demand mechanic services. Our goal is to ensure customer satisfaction by delivering high-quality services tailored to their needs around the clock. With Fuel Tech, your car is in safe hands!" />
-
-  <meta name="keywords"
-    content="Car Maintenance, Car Care Services, Fuel Delivery, Tire Replacement, Car Washing, Auto Repairs, On-Demand Mechanics, Roadside Assistance, Car Service Near Me, Mobile Mechanic Services, Engine Repair, Oil Change Services, Affordable Car Care, Professional Auto Services, 24/7 Car Maintenance, Vehicle Inspection, Brake Repair, Fuel Tech Services, Car Detailing, Track Your Service" />
-
-  <meta name="author" content="Fuel Tech Team" />
-
-  <meta property="og:title" content="FUEL TECH" />
-
-  <meta property="og:description"
-    content="Fuel Tech is a specialized website offering comprehensive car maintenance and care services. We provide convenient and fast solutions, including tire replacement, car washing, fuel delivery, repairs, and on-demand mechanic services. Our goal is to ensure customer satisfaction by delivering high-quality services tailored to their needs around the clock. With Fuel Tech, your car is in safe hands!" />
-
-  <meta property="og:image" content="https://moh7mmedehab.github.io/Fuel/Assets/Images/icon.png" />
-
-  <meta property="og:url" content="https://moh7mmedehab.github.io/Fuel" />
-
-  <meta property="og:type" content="website" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="CSS/style.css" />
-
-  <link rel="stylesheet" href="CSS/login.css" />
-
-  <link rel="icon" href="Assets/Images/icon.png" />
-
-  <title>FUEL TECH | For Cars Services</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUEL TECH | For Cars Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-
 <body>
+    <header>
+        <!-- Navigation Bar -->
+        <!-- <nav class="container">
+            <a href="#" class="brand">
+                <img src="img/logo.svg" alt="brand logo" />
+            </a>
+            <div class="s-s">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Album</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav> -->
 
-  <div class="login-section">
+        <!-- Order Section -->
+        <div id="order">
+            <div class="container ">
+                <!-- Page 1 -->
+                <div id="page1">
+                    <div class="left">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="form-floating">
+                            <input class="form-control" type="text" placeholder="" id="name">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" type="text" placeholder="Phone Number" id="phone">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="car">
+                            <div class="left-car">
+                                <div class="form-floating">
+                                    <input class="form-control w-100" type="text" placeholder="Car type" id="type">
+                                    <label for="type">Car type</label>
+                                </div>
+                            </div>
+                            <div class="right-car">
+                                <div class="form-floating">
+                                    <input class="form-control w-100" type="text" placeholder="Car model" id="model">
+                                    <label for="model">Car model</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="next next-btn">Next</button>
+                        </div>
+                    </div>
+                </div>
 
-    <img src="Assets/Images/logo.svg" alt="Brand Logo" />
+                <!-- Page 2 (Hidden initially) -->
+                <div id="page2" style="display: none;">
+                    <div class="container-page2">
+                        <div class="left">
+                            <h1>What service do you want?</h1>
+                            <div class="share">
+                                <div class="left-check">
+                                    <label>
+                                        <input type="checkbox" name="options" id="option1" value="option1"> Fuel
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="options" value="option2"> Car wash
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="options" value="option3"> Tires
+                                    </label><br>
+                                </div>
+                                <div class="right-check">
+                                    <label>
+                                        <input type="checkbox" name="options" value="option4"> Engine oil
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="options" value="option5"> Battery
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="options" value="option6"> Rescue
+                                    </label><br>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="next w-100" href="#" id="nextButton">Next</button>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="fuel-option hidden">
+                                <label>
+                                    <input type="radio" name="fuel" value="gasoline95"> Gasoline 95
+                                </label><br>
+                                <label>
+                                    <input type="radio" name="fuel" value="gasoline80"> Gasoline 80
+                                </label><br>
+                                <label>
+                                    <input type="radio" name="fuel" value="gasoline92"> Gasoline 92
+                                </label><br>
+                                <label>
+                                    <input type="radio" name="fuel" value="naturalGas"> Natural gas
+                                </label><br>
+                            </div>
+                            <div class="form-floating hidden hidden-textarea">
+                                <textarea class="form-control text-area" placeholder="Comments" id="message" style="height: 200px"></textarea>
+                                <label for="message">Comments</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
 
-    <div class="bar">
-
-      <span class="progress">
-
-
-
-      </span>
-
-    </div>
-
-  </div>
-
-  <nav class="container">
-
-    <a href="#" class="brand">
-
-      <img src="Assets/Images/logo.svg" alt="brand logo" />
-
-    </a>
-
-    <div class="menu fa-solid fa-bars">
-
-
-
-    </div>
-
-    <div class="s-s">
-
-      <ul>
-
-        <li>
-
-          <a href="" class="active">Home</a>
-
-        </li>
-
-        <li>
-
-          <a href="#services">Services</a>
-
-        </li>
-
-        <li>
-
-          <a href="#faqs">FAQS</a>
-
-        </li>
-        <li>
-
-          <a href="#contact">Contact</a>
-
-        </li>
-
-
-      </ul>
-
-      <div class="divider">
-
-
-
-      </div>
-
-      <div class="options">
-
-        <div class="translate">
-
-          <i class="fa-solid fa-globe"></i>
-
-          <p>AR</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-  <header class="container">
-
-    <h1>
-
-      Welcome to FUEL TECH
-
-    </h1>
-
-    <h2><span class="text"></span></h2>
-
-  </header>
-  <section id="services">
-    <div class="img-slider">
-      <div class="slide active">
-        <div class="left">
-          <div class="info">
-            <h2>24/7 Fuel service, at petrol station rates.</h2>
-            <p> Enjoy our contactless fuel delivery straight to your car with flexible scheduling. Easy booking, at your
-              convenience!</p>
-              <a href="https://ahmed-hossaam.github.io/fuel-form/" class="btn-order">order</a>
+                <!-- Page 3 (Hidden initially) -->
+                <div id="page3" style="display: none;">
+                    <div class="container-page3">
+                        <div class="middle">
+                            <div class="direction-inputs">
+                                <div class="left-input">
+                                    <div class="form-floating">
+                                        <input class="form-control " type="text" placeholder="Latitude" id="Latitude" readonly>
+                                        <label for="Latitude">Latitude</label>
+                                    </div>
+                                </div>
+                                <div class="right-input">
+                                    <div class="form-floating">
+                                        <input class="form-control " type="text" placeholder="Longitude" id="Longitude" readonly>
+                                        <label for="Longitude">Longitude</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="direction-inputs">
+                                <div class="left-input">
+                                    <div class="form-floating">
+                                        <input class="form-control" type="text" placeholder="Speed" id="Speed" readonly>
+                                        <label for="Speed">Speed</label>
+                                    </div>
+                                </div>
+                                <div class="right-input">
+                                    <div class="form-floating">
+                                        <input class="form-control " type="text" placeholder="Google map" id="Google" readonly>
+                                        <label for="Google map">Google map</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <input class="form-control" type="text" placeholder="Accuracy" id="Accuracy" readonly>
+                                <label for="Accuracy">Accuracy</label>
+                            </div>
+                            <button id="getLocation">Get Location</button>
+                            <div class="buttons">
+                                <a class="w-100 text-center" href="https://ahmed-hossaam.github.io/Review-/">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
         </div>
-        <div class="right">
-          <img src="Assets/Images/fuel.png" alt="">
-        </div>
-      </div>
-      <div class="slide ">
-        <div class="left">
-          <div class="info">
-            <h2>Stay charged with our battery change service.</h2>
-            <p>Unsure which battery you need? No bother – our specialist technicians will suggest the best boost for
-              you.</p>
-              <a href="https://ahmed-hossaam.github.io/fuel-form/" class="btn-order">order</a>
-            </div>
-        </div>
-        <div class="right">
-          <img src="Assets/Images/battery.png" alt="">
-        </div>
-      </div>
-      <div class="slide ">
-        <div class="left">
-          <div class="info">
-            <h2>Rise and shine. Your car deserves a spa day too.</h2>
-            <p>Give your ride the glow it’s worthy of. Allow our specialist car wash team to come to you and sparkle up
-              your day. </p>
-              <a href="https://ahmed-hossaam.github.io/fuel-form/" class="btn-order">order</a>
-            </div>
-        </div>
-        <div class="right">
-          <img src="Assets/Images/car wash.png" alt="">
-        </div>
-      </div>
-      <div class="slide ">
-        <div class="left">
-          <div class="info">
-            <h2>Tired tyres? We’ll upgrade your tread today.</h2>
-            <p>Avoid pointless trips to the garage when we can treat your ride to something fresh at your doorstep.</p>
-            <a href="https://ahmed-hossaam.github.io/fuel-form/" class="btn-order">order</a>
-          </div>
-        </div>
-        <div class="right">
-          <img src="Assets/Images/tyres.png" alt="">
-        </div>
-      </div>
-      <div class="slide ">
-        <div class="left">
-          <div class="info">
-            <h2>Engine oil with free 10-point check</h2>
-            <p>Mobile oil change, free 10-point check & original filter replacement. Your car deserves the best.</p>
-            <a href="https://ahmed-hossaam.github.io/fuel-form/" class="btn-order">order</a>
-          </div>
-        </div>
-        <div class="right">
-          <img src="Assets/Images/oil.png" alt="">
-        </div>
-      </div>
-      <div class="slide ">
-        <div class="left">
-          <div class="info">
-            <h2>Stuck at the roadside? No sweat.</h2>
-            <p>Ran out of fuel? Got a puncture? Battery died? Need a tow? Just Fuel tech it and we’ll be to you in
-              minutes.</p>
-              <a href="https://ahmed-hossaam.github.io/fuel-form/" class="btn-order">order</a>
-            </div>
-        </div>
-        <div class="right">
-          <img src="Assets/Images/recuse.png" alt="">
-        </div>
-      </div>
+    </header>
 
-
-      <div class="navigation">
-        <div class="btn active"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-      </div>
-    </div>
-  </section>
-  <div class="faqs" id="faqs">
-    <div class="faq-container">
-      <div class="faq-header">
-        <img src="Assets/Images/logo.svg" alt="logo">
-        <h1>Questions? Answered.</h1>
-      </div>
-
-      <!-- FAQ Item -->
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>What services do you offer?
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-        <div class="faq-answer">
-          <p>We provide a wide range of car services, including regular maintenance, oil changes, tire replacement,
-            engine repair, car washing, and detailing.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>Do you provide on-site services?
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-        <div class="faq-answer">
-          <p>Yes, we offer on-site services such as car washing, battery replacement, and emergency roadside assistance.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>What are your operating hours?</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-        <div class="faq-answer">
-          <p>24 Hours all week days</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  </section>
-  <footer id="contact">
-    <div class="social-icons">
-      <img src="Assets/Images/logo.svg" id="footer-logo" alt="logo">
-    </div>
-    <div class="links">
-      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-    </div>
-    <div class="subscribe">
-      <form action="https://formsubmit.co/ahmedsakhames@gmail.com" method="post">
-        <input type="email" placeholder="Enter your email">
-        <button class="btn-submit">Submit</button>
-      </form>
-    </div>
-    <div class="copyright">Copyright &copy; All Rights Reserved At <b>Fuel Tech</b> 2025</div>
-  </footer>
-  <button class="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
-  <script src="JS/main.js"></script>
-
+    <script src="main.js"></script>
 </body>
-
 </html>

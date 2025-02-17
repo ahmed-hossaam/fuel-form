@@ -22,14 +22,14 @@ function validatePage1() {
         isValid = false;
     }
 
-    // Validate Phone (must be numeric and a certain length, e.g., 
-    // RegEx to check for exactly 10 digits
-    // if (phone.length!=11 || isNaN(phone)) {
-    //     // phone.style.color = "black";
-    // } 
-    // else{
-    //     isValid = false;
-    // }
+    // Validate Phone (must be numeric and a certain length, e.g., 10 digits)
+    const phonePattern = /^[0-9]{10}$/; // RegEx to check for exactly 10 digits
+    if (phonePattern.test(phone.value)) {
+        phone.style.backgroundColor = "white";
+        phone.style.color = "black";
+    } else {
+        isValid = false;
+    }
 
     // Validate Car Type
     if (carType.value) {
